@@ -4,10 +4,24 @@ import Navigation from "./components/Navigation/Navigation";
 import Logo from "./components/Navigation/Logo/Logo";
 import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
+import Particles from "react-particles-js";
+
 class App extends Component {
   render() {
+    const particlesOptions = {
+      particles: {
+        number: {
+          value: 50,
+          density: {
+            enable: true,
+            value_area: 800
+          }
+        }
+      }
+    };
     return (
       <div className="App">
+        <Particles className="particles" params={particlesOptions} />
         <Navigation />
         <Logo />
         <Rank />
